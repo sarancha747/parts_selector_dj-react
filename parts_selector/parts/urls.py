@@ -1,6 +1,7 @@
 from django.urls import path, include
-from . import views
+from .views import socket_list, socket_detail
 
 urlpatterns = [
-    path('', views.index),
+    path('sockets/', socket_list),
+    path('sockets/<int:pk>', socket_detail)
 ]
